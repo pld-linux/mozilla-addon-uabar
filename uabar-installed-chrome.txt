@@ -1,2 +1,2 @@
-content,install,url,resource:/chrome/uabar/content/
-locale,install,url,resource:/chrome/uabar/locale/en-US/uabar/
+content,install,url,jar:resource:/chrome/uabar.jar!/content/
+locale,install,url,jar:resource:/chrome/uabar.jar!/locale/en-US/uabar/
