@@ -15,7 +15,6 @@ BuildArch:	noarch
 Requires:	mozilla >= 1.0-7
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 %define		_chromedir	%{_libdir}/mozilla/chrome
 
 %description
