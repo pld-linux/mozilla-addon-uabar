@@ -12,7 +12,7 @@ Source1:	%{_realname}-installed-chrome.txt
 URL:		http://uabar.mozdev.org/
 BuildRequires:	unzip
 BuildRequires:	zip
-Requires(post,postun):	mozilla
+Requires(post,postun):	mozilla >= 1.7.3-3
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.0-7
 BuildArch:	noarch
@@ -49,20 +49,10 @@ install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 rm -rf $RPM_BUILD_ROOT
 
 %post
-umask 022
-cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt ||:
-rm -f %{_libdir}/mozilla/components/{compreg,xpti}.dat \
-	%{_datadir}/mozilla/chrome/{chrome.rdf,overlayinfo/*/*/*.rdf} ||:
-MOZILLA_FIVE_HOME=%{_libdir}/mozilla %{_bindir}/regxpcom ||:
-MOZILLA_FIVE_HOME=%{_libdir}/mozilla %{_bindir}/regchrome ||:
+%{_sbindir}/mozilla-chrome+xpcom-generate
 
 %postun
-umask 022
-cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
-rm -f %{_libdir}/mozilla/components/{compreg,xpti}.dat \
-	%{_datadir}/mozilla/chrome/{chrome.rdf,overlayinfo/*/*/*.rdf}
-MOZILLA_FIVE_HOME=%{_libdir}/mozilla %{_bindir}/regxpcom
-MOZILLA_FIVE_HOME=%{_libdir}/mozilla %{_bindir}/regchrome
+%{_sbindir}/mozilla-chrome+xpcom-generate
 
 %files
 %defattr(644,root,root,755)
