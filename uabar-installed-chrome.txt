@@ -1,0 +1,2 @@
+content,install,url,resource:/chrome/uabar/content/
+locale,install,url,resource:/chrome/uabar/locale/en-US/uabar/
