@@ -10,6 +10,7 @@ Source0:	http://uabar.mozdev.org/%{_realname}.xpi
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://uabar.mozdev.org/
 BuildRequires:	unzip
+BuildArch:	noarch
 Requires:	mozilla >= 1.0-7
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
@@ -36,16 +37,14 @@ rm -rf $RPM_BUILD_ROOT%{_chromedir}/%{_realname}/CVS
 rm -rf $RPM_BUILD_ROOT%{_chromedir}/%{_realname}/content/CVS
 rm -rf $RPM_BUILD_ROOT%{_chromedir}/%{_realname}/content/*~
 
-%clean
-rm -rf $RPM_BUILD_ROOT
-
 %post
-cd %{_chromedir}
-cat *-installed-chrome.txt >installed-chrome.txt
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 
 %postun
-cd %{_chromedir}
-cat *-installed-chrome.txt >installed-chrome.txt
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+
+%clean
+rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
