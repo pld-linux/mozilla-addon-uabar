@@ -37,7 +37,7 @@ install -d $RPM_BUILD_ROOT%{_chromedir}
 cd %{_realname}
 rm -r CVS
 rm -r content/CVS
-rm content/*~
+rm content/*
 zip -r -9 -m ../%{_realname}.jar ./
 cd -
 
