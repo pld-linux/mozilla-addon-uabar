@@ -3,7 +3,7 @@ Summary(pl):	Pasek narzêdziowy do fa³szowania identyfikacji przegl±darki
 Name:		mozilla-addon-uabar
 %define		_realname	uabar
 Version:	0.1.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://download.mozdev.org/%{_realname}/%{_realname}-%{version}.xpi
@@ -17,7 +17,7 @@ Requires:	mozilla >= 1.0-7
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
-%define		_chromedir	%{_libdir}/mozilla/chrome
+%define		_chromedir	%{_datadir}/mozilla/chrome
 
 %description
 A toolbar that allows using false browser identify (User-Agent
