@@ -7,6 +7,7 @@ Release:	3
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://uabar.mozdev.org/%{_realname}.xpi
+# Source0-md5:	267db02cde66c4d04baa2d3b702e484c
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://uabar.mozdev.org/
 BuildRequires:	unzip
