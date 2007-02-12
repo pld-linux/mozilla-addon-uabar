@@ -1,5 +1,5 @@
 Summary:	Toolbar for false User-Agent: header
-Summary(pl):	Pasek narzêdziowy do fa³szowania identyfikacji przegl±darki
+Summary(pl.UTF-8):   Pasek narzÄ™dziowy do faÅ‚szowania identyfikacji przeglÄ…darki
 Name:		mozilla-addon-uabar
 %define		_realname	uabar
 Version:	0.1.1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A toolbar that allows using false browser identify (User-Agent
 header).
 
-%description -l pl
-Pasek narzêdziowy do fa³szowania identyfikacji przegl±darki (nag³ówka
+%description -l pl.UTF-8
+Pasek narzÄ™dziowy do faÅ‚szowania identyfikacji przeglÄ…darki (nagÅ‚Ã³wka
 User-Agent).
 
 %prep
