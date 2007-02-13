@@ -1,5 +1,5 @@
 Summary:	Toolbar for false User-Agent: header
-Summary(pl.UTF-8):   Pasek narzędziowy do fałszowania identyfikacji przeglądarki
+Summary(pl.UTF-8):	Pasek narzędziowy do fałszowania identyfikacji przeglądarki
 Name:		mozilla-addon-uabar
 %define		_realname	uabar
 Version:	0.1.1
